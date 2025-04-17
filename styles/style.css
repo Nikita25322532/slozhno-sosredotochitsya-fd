@@ -248,8 +248,7 @@ main {
   .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 12px;
-    row-gap: 20px;
+    gap: 20px;
   }
 
   .section__title {
@@ -321,5 +320,12 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    
+  }
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 20px;
+    column-gap: 12px;
   }
 }

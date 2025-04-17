@@ -1,6 +1,7 @@
 .page {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   font-family: var(--main-font, sans-serif);
   font-size: 18px;
   line-height: 1.3;
@@ -25,6 +26,7 @@ h4 {
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100dvb;
   padding: var(--page-padding, 10px);
+  min-block-size: 668px;
 }
 
 .decorated-zone {
@@ -140,7 +142,7 @@ h4 {
 }
 
 .main-title {
-  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 
 a.main-title:focus {
@@ -188,16 +190,16 @@ main {
   margin-block-end: 10px;
 }
 
-.section_free .title-decor {
+.section_how .title-decor {
   font-weight: 400;
 }
 
-.section_free .article-list > .title-decor {
+.section_how .article-list > .title-decor {
   margin-block-end: 20px;
   font-weight: 700;
 }
 
-.article-card:not(:last-child) .article-card__text {
+.article-card:not(:last-child) .article-card__text{
   margin-block-end: 20px;
 }
 
@@ -224,16 +226,10 @@ main {
 .footer__title {
   justify-self: center;
   align-self: center;
-  color: var(--bigest-title-color, #db00ff);
 }
 
 @media (width >= 768px) {
-  :root {
-    --page-padding: 20px;
-    --main-margin-block: 60px;
-    --main-gap: 80px;
-  }
-
+  
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 99px;
@@ -252,7 +248,8 @@ main {
   .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    column-gap: 12px;
+    row-gap: 20px;
   }
 
   .section__title {
@@ -263,12 +260,12 @@ main {
     grid-column: 2 / -1;
   }
 
-  .section_two .section__title {
+  .section_what .section__title {
     grid-column: 1 / 2;
     margin-block-end: 0;
   }
 
-  .section_two .article-list {
+  .section_what .article-list {
     grid-column: 1 / -1;
   }
 
@@ -315,12 +312,12 @@ main {
     gap: 10px;
   }
 
-  .title-sizing {
+  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 129.53px;
   }
 
-  .section_two .article-list {
+  .section_what .article-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
